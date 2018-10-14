@@ -33,7 +33,7 @@ namespace UDP_Protocol
                 {
                     string message = Console.ReadLine();
                     byte[] data = Encoding.Unicode.GetBytes(message);
-                    EndPoint remotePoint = new EndPoint(IPAddress.Parse("127.0.0.1"), remotePort);
+                    EndPoint remotePoint = new IPEndPoint(IPAddress.Parse("127.0.0.1"), remotePort);
                     listeningSocket.SendTo(data, remotePoint);
 
                 }
