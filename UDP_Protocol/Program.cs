@@ -26,6 +26,7 @@ namespace UDP_Protocol
             try
             {
                 listeningSocket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
+                
                 Task listeningTask = new Task(Listen);
                 listeningTask.Start();
                 //отправка сообщений на разные порты
